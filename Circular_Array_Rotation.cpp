@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries)
+vector<int> circularArrayRotation(vector<int> a, int k, const vector<int>& queries)
 {
     vector<int> result;
     int len = (int)a.size();
@@ -37,9 +37,9 @@ vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries)
     // cout << endl;
 
     // queries
-    for (size_t i = 0; i < queries.size(); i++)
+    for (int querie : queries)
     {
-        result.push_back(a.at(queries.at(i)));
+        result.push_back(a.at(querie));
     }
 
     return result;
