@@ -17,7 +17,6 @@ string appendAndDelete(string s, string t, int k) {
     int balance = len1 - cl;
     balance += len2 - cl;
 
-
     // if k is greater than or equal to the sum of the length of s and t
     if (k >= (len1 + len2))
         return "Yes";
