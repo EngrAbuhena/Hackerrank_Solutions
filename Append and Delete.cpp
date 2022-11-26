@@ -1,3 +1,11 @@
+//
+// HackerRank
+// Append and Delete
+// Passed all testcases
+//
+// Created by Abuhena Rony
+//
+
 #include<bits/stdc++.h>
 #include<string>
 
