@@ -4,30 +4,46 @@ using namespace std;
 
 int equalizeArray(vector<int> arr)
 {
-    int count = 0;
     int maxcount = 0;
     int len = (int)arr.size();
 
+    int temp = 0;
     for (int i = 0; i < len; i++)
     {
+        int count = 0;
         for (int j = i + 1; j < len; j++)
         {
-            if(arr.at(i)==arr.at(j))
+            if (arr.at(i) == arr.at(j))
             {
                 count++;
-                cout<<"Count: "<<count<<" ";
+                temp += 1;
+                cout << count << " ";
             }
         }
-        if(count>=maxcount)
-        maxcount=count;
-        
+        if (count >= maxcount)
+            maxcount = count;
     }
-    cout<<"Max: "<<maxcount<<"\n";
-    return 0;
+    cout << "Length: " << len << " Max: " << maxcount << " Temp: " << temp << "\n";
+    int result = len - maxcount + temp;
+    return result;
 }
 
 int main()
 {
-    vector<int> a = {3, 3, 2, 1, 3};
-    int result = equalizeArray(a);
+    int result;
+    vector<int> a;
+    a = {3, 3, 2, 1, 3};
+    result = equalizeArray(a);
+    if (result == 2)
+        cout << "Output: " << result << endl;
+    else
+        cout << "Output: " << result << " is a wrong answer!\nExpected 2" << endl;
+    //--------------------------------
+    a = {1, 2, 3, 1, 2, 3, 3, 3};
+    result = equalizeArray(a);
+    if (result == 4)
+        cout << "Output: " << result << endl;
+    else
+        cout << "Output: " << result << " is a wrong answer!\nExpected 4" << endl;
+    return 0;
 }
