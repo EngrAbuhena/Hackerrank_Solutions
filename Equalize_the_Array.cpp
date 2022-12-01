@@ -1,3 +1,11 @@
+//
+// HackerRank
+// Equalize The Array
+// Passed all testcases
+//
+// Created by Abuhena Rony
+//
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,24 +15,23 @@ int equalizeArray(vector<int> arr)
     int maxcount = 0;
     int len = (int)arr.size();
 
-    int temp = 0;
     for (int i = 0; i < len; i++)
     {
         int count = 0;
-        for (int j = i + 1; j < len; j++)
+        for (int j = i; j < len; j++)
         {
             if (arr.at(i) == arr.at(j))
             {
                 count++;
-                temp += 1;
                 cout << count << " ";
             }
         }
         if (count >= maxcount)
             maxcount = count;
     }
-    cout << "Length: " << len << " Max: " << maxcount << " Temp: " << temp << "\n";
-    int result = len - maxcount + temp;
+    cout << endl;
+    cout << "Length: " << len << " Max: " << maxcount << "\n";
+    int result = len - maxcount;
     return result;
 }
 
