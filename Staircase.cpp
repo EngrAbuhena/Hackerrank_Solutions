@@ -1,3 +1,12 @@
+//
+// HackerRank
+// Staircase
+// Passed all testcases
+//
+// Created by Abuhena Rony
+//
+#include<bits/stdc++.h>
+
 void staircase(int n) {
         for(int i=1; i<=n; i++)
     {
