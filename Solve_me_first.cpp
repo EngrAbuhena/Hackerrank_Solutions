@@ -1,3 +1,10 @@
+//
+// HackerRank
+// Solve Me First
+// Passed all testcases
+//
+// Created by Abuhena Rony
+//
 #include <cmath>
 #include <cstdio>
 #include <vector>
